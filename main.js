@@ -37,3 +37,47 @@ function generateRawMetal() {
 	}
 	document.getElementById('container-raw-materials').innerHTML = html
 }
+
+function generateSulphur() {
+	let html = ''
+
+	let metalSulphur = Math.floor(Math.random() * (10 - 5) + 5)
+
+	for (let i = 0; i < 10; i++) {
+		html += '<div class="row justify-content-center">'
+		for (let k = 0; k < 10; k++) {
+			if ((Math.floor(Math.random() * 100)) > 90 && metalSulphur != 0) {
+				html += '<div class="col-sm"><button onclick="addSulphur(this)" type="button" class="btn btn-warning">R</button></div>'
+				metalSulphur -= 1
+			} else {
+				html += '<div class="col-sm"><button type="button" class="btn btn-dark">R</button></div>'
+			}
+		}
+		html += '</div>'
+	}
+	document.getElementById('container-raw-materials').innerHTML = html
+}
+
+function generateCharcoal() {
+	let html = ''
+
+	let metalCharcoal = Math.floor(Math.random() * (10 - 5) + 5)
+
+	for (let i = 0; i < 10; i++) {
+		html += '<div class="row justify-content-center">'
+		for (let k = 0; k < 10; k++) {
+			if ((Math.floor(Math.random() * 100)) > 90 && metalCharcoal != 0) {
+				html += '<div class="col-sm"><button onclick="addCharcoal(this)" type="button" class="btn btn-warning">R</button></div>'
+				metalCharcoal -= 1
+			} else {
+				html += '<div class="col-sm"><button type="button" class="btn btn-dark">R</button></div>'
+			}
+		}
+		html += '</div>'
+	}
+	document.getElementById('container-raw-materials').innerHTML = html
+}
+
+function hideElement(element) {
+	element.innerText = ''
+}

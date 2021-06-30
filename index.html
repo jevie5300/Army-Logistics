@@ -66,20 +66,20 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <p>Gunpowder: </p>
+                            <p>Sulphur: </p>
                         </div>
                         <div class="col">
-                            <p>0</p>
+                            <p id="label-sulphur">0</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <p>Food: </p>
+                            <p>Charcoal: </p>
                         </div>
                         <div class="col">
-                            <p>0</p>
+                            <p id="label-charcoal">0</p>
                         </div>
                     </div>
                 </div>
@@ -110,10 +110,10 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <p>Food: </p>
+                            <p></p>
                         </div>
                         <div class="col">
-                            <p>0</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <!-- Metal Farming -->
+    <!-- Farming -->
     <div class="container">
         <div id="accordion">
             <div class="card">
@@ -129,7 +129,7 @@
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                             aria-expanded="true" aria-controls="collapseOne">
-                            Metal Farming
+                            Farming
                         </button>
                     </h5>
                 </div>
@@ -140,18 +140,24 @@
                             <div class="col">
                                 <button class="btn btn-dark" onclick="generateRawMetal()">Find Metal</button>
                             </div>
+                            <div class="col">
+                                <button class="btn btn-dark" onclick="generateSulphur()">Find Sulphur</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-dark" onclick="generateCharcoal()">Find Charcoal</button>
+                            </div>
                         </div>
                         <div class="row">
                             <div><br></div>
                         </div>
                         <div id="container-raw-materials" class="row justify-content-center">
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <br>
 
     <!-- Refinary -->
@@ -169,6 +175,9 @@
 
                 <div id="collapseRefinary" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
+                        <div class="row">
+                            <label id="label-refinary-message"></label>
+                        </div>
                         <div class="row">
                             <div class="row">
                                 <div class="col">
