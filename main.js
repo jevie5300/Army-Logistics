@@ -24,16 +24,16 @@ function generateRawMetal() {
 	let metalAmount = Math.floor(Math.random() * (10 - 5) + 5)
 
 	for (let i = 0; i < 10; i++) {
-		html += '<div class="row justify-content-center">'
+		// html += '<div class="row justify-content-center">'
 		for (let k = 0; k < 10; k++) {
 			if ((Math.floor(Math.random() * 100)) > 90 && metalAmount != 0) {
-				html += '<div class="col-sm"><button onclick="addRawMetal(this)" type="button" class="btn btn-warning">R</button></div>'
+				html += '<button onclick="addRawMetal(this)" type="button" class="btn btn-warning">Fe</button>'
 				metalAmount -= 1
 			} else {
-				html += '<div class="col-sm"><button type="button" class="btn btn-dark">R</button></div>'
+				html += '<button type="button" class="btn btn-dark">X</button>'
 			}
 		}
-		html += '</div>'
+		// html += '</div>'
 	}
 	document.getElementById('container-raw-materials').innerHTML = html
 }
@@ -44,16 +44,16 @@ function generateSulphur() {
 	let metalSulphur = Math.floor(Math.random() * (10 - 5) + 5)
 
 	for (let i = 0; i < 10; i++) {
-		html += '<div class="row justify-content-center">'
+		html += ''
 		for (let k = 0; k < 10; k++) {
 			if ((Math.floor(Math.random() * 100)) > 90 && metalSulphur != 0) {
-				html += '<div class="col-sm"><button onclick="addSulphur(this)" type="button" class="btn btn-warning">R</button></div>'
+				html += '<button onclick="addSulphur(this)" type="button" class="btn btn-warning">S</button>'
 				metalSulphur -= 1
 			} else {
-				html += '<div class="col-sm"><button type="button" class="btn btn-dark">R</button></div>'
+				html += '<button type="button" class="btn btn-dark">X</button>'
 			}
 		}
-		html += '</div>'
+		html += ''
 	}
 	document.getElementById('container-raw-materials').innerHTML = html
 }
@@ -64,20 +64,19 @@ function generateCharcoal() {
 	let metalCharcoal = Math.floor(Math.random() * (10 - 5) + 5)
 
 	for (let i = 0; i < 10; i++) {
-		html += '<div class="row justify-content-center">'
+		html += ''
 		for (let k = 0; k < 10; k++) {
 			if ((Math.floor(Math.random() * 100)) > 90 && metalCharcoal != 0) {
-				html += '<div class="col-sm"><button onclick="addCharcoal(this)" type="button" class="btn btn-warning">R</button></div>'
+				html += '<button onclick="addCharcoal(this)" type="button" class="btn btn-warning">C</button>'
 				metalCharcoal -= 1
 			} else {
-				html += '<div class="col-sm"><button type="button" class="btn btn-dark">R</button></div>'
+				html += '<button type="button" class="btn btn-dark">X</button>'
 			}
 		}
-		html += '</div>'
 	}
 	document.getElementById('container-raw-materials').innerHTML = html
 }
 
-function hideElement(element) {
+/* function hideElement(element) {
 	element.innerText = ''
-}
+} */
